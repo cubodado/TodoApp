@@ -1,6 +1,6 @@
 import classes from './TodoList.module.css';
 import TodoItem from './TodoItem';
-import EmptyPage from './ui/EmptyPage';
+import EmptyPage from '../ui/EmptyPage';
 import { useSelector } from 'react-redux';
 
 const TodoList = () => {

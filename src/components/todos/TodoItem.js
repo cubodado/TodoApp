@@ -1,6 +1,6 @@
 import classes from './TodoItem.module.css';
 import { useDispatch } from 'react-redux';
-import { toggleClear, deleteTodo } from '../redux/todoSlice';
+import { toggleClear, deleteTodo } from '../../redux/todoSlice';
 
 const TodoItem = ({ id, content, clear }) => {
   const dispatch = useDispatch();

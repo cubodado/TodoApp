@@ -1,8 +1,8 @@
 import './App.css';
-import TodoInput from './components/TodoInput';
+import TodoInput from './components/todos/TodoInput';
 import Line from './components/ui/Line';
-import TodoList from './components/TodoList';
-import TodoFooter from './components/TodoFooter';
+import TodoList from './components/todos/TodoList';
+import TodoFooter from './components/todos/TodoFooter';
 
 function App() {
   return (

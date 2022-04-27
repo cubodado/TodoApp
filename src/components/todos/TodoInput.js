@@ -1,6 +1,6 @@
 import classes from './TodoInput.module.css';
 import { useDispatch } from 'react-redux';
-import { addTodo } from '../redux/todoSlice';
+import { addTodo } from '../../redux/todoSlice';
 
 const TodoInput = () => {
   const dispatch = useDispatch();
