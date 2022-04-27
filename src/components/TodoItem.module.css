@@ -14,3 +14,7 @@ label p {
   margin-left: 6px;
   color: #7b7b7b;
 }
+
+.checked {
+  background-color: #caccd0;
+}
