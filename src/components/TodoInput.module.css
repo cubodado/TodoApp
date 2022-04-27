@@ -1,0 +1,11 @@
+.input {
+  width: 98%;
+  height: 32px;
+  background-color: #f2f2f2;
+  border: 1px solid #b1b1b1;
+  border-radius: 5px;
+}
+
+.input::placeholder {
+  font-family: 'Raleway', sans-serif;
+}
