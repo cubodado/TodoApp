@@ -1,14 +1,10 @@
 import classes from './TodoList.module.css';
 import TodoItem from './TodoItem';
 import EmptyPage from './ui/EmptyPage';
+import { useSelector } from 'react-redux';
 
 const TodoList = () => {
-  const todos = [
-    { id: 1, content: 'Meditation', clear: 'false' },
-    { id: 2, content: 'Taking a nap', clear: 'true' },
-    { id: 3, content: 'Reading network books', clear: 'false' },
-    { id: 4, content: 'Running', clear: 'false' },
-  ];
+  const todos = useSelector((state) => state.todos);
 
   const todoItems = todos.map((todo) => {
     return (
