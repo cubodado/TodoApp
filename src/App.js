@@ -1,6 +1,7 @@
 import './App.css';
 import TodoInput from './components/TodoInput';
 import Line from './components/ui/Line';
+import TodoList from './components/TodoList';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <h1>TODO LIST</h1>
         <TodoInput />
         <Line />
+        <TodoList />
       </main>
     </div>
   );
