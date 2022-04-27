@@ -1,6 +1,10 @@
 import classes from './TodoInput.module.css';
+import { useDispatch } from 'react-redux';
+import { addTodo } from '../redux/todoSlice';
 
 const TodoInput = () => {
+  const dispatch = useDispatch();
+
   const isEnter = (e) => {
     const todoInput = document.querySelector('input');
     if (e.charCode === 13) {
@@ -24,7 +28,11 @@ const TodoInput = () => {
 
     const validTodoInput = todoInput.value.trim();
 
-    console.log(validTodoInput);
+    dispatch(
+      addTodo({
+        title: validTodoInput,
+      })
+    );
 
     todoInput.value = '';
   };
