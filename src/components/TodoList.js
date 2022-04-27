@@ -1,3 +1,6 @@
+import classes from './TodoList.module.css';
+import TodoItem from './TodoItem';
+
 const TodoList = () => {
   const todos = [
     { id: 1, content: 'Meditation', clear: false },
@@ -7,12 +10,10 @@ const TodoList = () => {
   ];
 
   return (
-    <ul>
+    <ul className={classes.list}>
       {todos.map((todo) => {
         return (
-          <p>
-            {todo.id} : {todo.content} {todo.clear}
-          </p>
+          <TodoItem id={todo.id} content={todo.content} clear={todo.clear} />
         );
       })}
     </ul>

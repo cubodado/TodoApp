@@ -1,0 +1,16 @@
+.item {
+  display: flex;
+  background-color: #ddedfc;
+  height: 60px;
+  border-radius: 5px;
+  text-align: left;
+  align-items: center;
+  padding-left: 15px;
+  margin-bottom: 12px;
+}
+
+label p {
+  display: inline-block;
+  margin-left: 6px;
+  color: #7b7b7b;
+}
