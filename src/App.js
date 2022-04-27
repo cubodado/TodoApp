@@ -2,6 +2,7 @@ import './App.css';
 import TodoInput from './components/TodoInput';
 import Line from './components/ui/Line';
 import TodoList from './components/TodoList';
+import TodoFooter from './components/TodoFooter';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Line />
         <TodoList />
         <Line />
+        <TodoFooter />
       </main>
     </div>
   );

@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  color: #7b7b7b;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  cursor: pointer;
+}
+
+.status {
+  margin: 0px 10px;
+}
+
+.checked {
+  border-radius: 5px;
+  background-color: #ddedfc;
+}
