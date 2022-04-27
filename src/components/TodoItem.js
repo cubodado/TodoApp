@@ -14,8 +14,22 @@ const TodoItem = ({ id, content, clear }) => {
     );
   };
 
+  const showDeleteButton = (event) => {
+    const deleteButton = event.currentTarget.childNodes[1];
+    deleteButton.classList.add(`${classes.visible}`);
+  };
+
+  const hideDeleteButton = (event) => {
+    const deleteButton = event.currentTarget.childNodes[1];
+    deleteButton.classList.remove(`${classes.visible}`);
+  };
+
   return (
-    <div className={`${classes.item} ${clear && classes.checked}`}>
+    <div
+      className={`${classes.item} ${clear && classes.checked}`}
+      onMouseOver={showDeleteButton}
+      onMouseLeave={hideDeleteButton}
+    >
       <label>
         <input
           type="checkbox"
@@ -25,6 +39,7 @@ const TodoItem = ({ id, content, clear }) => {
         ></input>
         <p>{content}</p>
       </label>
+      <button className={classes.delete}>🗑️</button>
     </div>
   );
 };
