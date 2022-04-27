@@ -1,6 +1,6 @@
 import classes from './TodoItem.module.css';
 import { useDispatch } from 'react-redux';
-import { toggleClear } from '../redux/todoSlice';
+import { toggleClear, deleteTodo } from '../redux/todoSlice';
 
 const TodoItem = ({ id, content, clear }) => {
   const dispatch = useDispatch();
@@ -10,6 +10,14 @@ const TodoItem = ({ id, content, clear }) => {
       toggleClear({
         id: id,
         clear: !clear,
+      })
+    );
+  };
+
+  const deleteTodoHandler = () => {
+    dispatch(
+      deleteTodo({
+        id: id,
       })
     );
   };
@@ -39,7 +47,9 @@ const TodoItem = ({ id, content, clear }) => {
         ></input>
         <p>{content}</p>
       </label>
-      <button className={classes.delete}>🗑️</button>
+      <button className={classes.delete} onClick={deleteTodoHandler}>
+        🗑️
+      </button>
     </div>
   );
 };
