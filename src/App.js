@@ -11,6 +11,7 @@ function App() {
         <TodoInput />
         <Line />
         <TodoList />
+        <Line />
       </main>
     </div>
   );
