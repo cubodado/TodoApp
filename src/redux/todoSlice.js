@@ -12,8 +12,8 @@ const todoSlice = createSlice({
     addTodo: (state, action) => {
       const newTodo = {
         id: Math.random(),
-        title: action.payload.title,
-        clear: 'false',
+        content: action.payload.content,
+        clear: false,
       };
       state.push(newTodo);
     },

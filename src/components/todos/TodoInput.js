@@ -30,7 +30,7 @@ const TodoInput = () => {
 
     dispatch(
       addTodo({
-        title: validTodoInput,
+        content: validTodoInput,
       })
     );
 
