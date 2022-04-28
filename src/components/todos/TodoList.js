@@ -1,10 +1,17 @@
 import classes from './TodoList.module.css';
 import TodoItem from './TodoItem';
 import EmptyPage from '../ui/EmptyPage';
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getTodoAsync } from '../../redux/todoSlice';
 
 const TodoList = () => {
+  const dispatch = useDispatch();
   const todos = useSelector((state) => state.todos);
+
+  useEffect(() => {
+    dispatch(getTodoAsync());
+  }, [dispatch]);
 
   const todoItems = todos.map((todo) => {
     return (
